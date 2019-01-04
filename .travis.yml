@@ -1,0 +1,53 @@
+language: minimal
+
+git:
+  depth: 10
+  quiet: true
+
+env:
+  global:
+  - VERBOSE=true
+  - HEADLESS=on
+
+before_install:
+- docker --version
+- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+- sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+- sudo add-apt-repository -y ppa:ansible/ansible
+- sudo apt-get update
+- sudo apt-get -y --allow-unauthenticated install docker-ce ansible
+- docker --version
+- ansible --version
+# Update GNU Make to a version that supports output grouping of parallel executed targets
+- |
+  ( \
+    test -d ~/.make/make-4.1 || \
+    ( \
+      pushd ~/.make && wget http://ftp.gnu.org/gnu/make/make-4.1.tar.gz && \
+      tar xvf make-4.1.tar.gz && cd make-4.1 && \
+      ./configure && make && popd \
+    ) \
+  ) && pushd ~/.make/make-4.1 && sudo make install && sudo ln -sf /usr/local/bin/make /usr/bin/make && popd
+- make --version
+
+before_script:
+- echo "$DOCKER_PASSWORD" | docker login -u $DOCKER_USERNAME --password-stdin
+# Configure ansible vault password to decrypt secrets
+- echo "$VAULT_PASSWORD" > .ansible-vault-password
+
+deploy:
+- provider: script
+  skip_cleanup: true
+  script: make docker/.pushed
+  on:
+    branch: master
+- provider: script
+  skip_cleanup: true
+  script: make deploy
+  on:
+    branch: master
+
+cache:
+  directories:
+  - ~/.make
+  - ~/.npm
