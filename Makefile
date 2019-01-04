@@ -7,6 +7,7 @@ MAKE_INCLUDES_DIR := make
 export GIT_HASH  ?= $(shell git --no-pager show -s --format="%h")
 
 PROJECT_NAME := jeroenvisser.online
+export DOMAIN_NAME := jeroenvisser.online
 
 DOCKER_IMAGE_PREFIX := jvisser
 DOCKER_IMAGE := $(DOCKER_IMAGE_PREFIX)/$(PROJECT_NAME)-website
@@ -14,7 +15,7 @@ DOCKER_IMAGE_TAG := $(DOCKER_IMAGE):$(GIT_HASH)
 DOCKER_IMAGE_TAG_DIST := $(DOCKER_IMAGE):dist
 DOCKER_EXPOSE_PORT := 80
 
-KUBE_APP_NAMESPACE = jeroenvisser-online
+export KUBE_APP_NAMESPACE = jeroenvisser-online
 KUBE_YAMLS := env/prod/kube.yaml
 KUBE_DEPLOY_WAIT_RESOURCES := deploy/web
 
@@ -39,4 +40,3 @@ up: docker/.built
 
 .PHONY: refresh-container
 refresh-container: remove-running-docker-containers up
-
