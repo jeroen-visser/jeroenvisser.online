@@ -1,0 +1,10 @@
+.about-section__role-description {
+  .about-section & {
+    font-weight: lighter;
+  }
+}
+
+.about-section {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, $black 0%,#{fade-out($black, .1)} 75%,#{fade-out($black, .2)} 100%);
+}

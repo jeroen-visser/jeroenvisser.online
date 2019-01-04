@@ -1,0 +1,16 @@
+.interests-section {
+  padding: 5rem 0 5rem 0;
+}
+
+h4 {
+  .interests-section [class*="topic-"] & {
+    line-height: 51px;
+    font-weight: bold;
+  }
+}
+
+.topic {
+  .interests-section & {
+    margin-bottom: 1rem;
+  }
+}

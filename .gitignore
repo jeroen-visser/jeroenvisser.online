@@ -1,7 +1,8 @@
+.DS_Store
+
 /node_modules
 /.sass-cache
 /bower_components
-/.DS_Store
 /vendor
 /css
 /high-quality-images
