@@ -8,4 +8,8 @@
 /high-quality-images
 /build
 /js/*.min.js
-/docker/.built
+.built
+.pushed
+.ansible-vault-password
+.kube
+/make/kubernetes.vars.mk
