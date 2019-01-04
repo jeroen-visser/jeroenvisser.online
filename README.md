@@ -12,6 +12,12 @@ TODO
 
 ## Download and Installation
 
+### Dependencies
+
+- docker
+- ansible-vault
+- GNU Make 3.81 or newer 
+
 To begin:
 * Clone the repo: `git clone https://github.com/jeroen-visser/jeroenvisser.online.git`
 * Start instance by running: `make up`
