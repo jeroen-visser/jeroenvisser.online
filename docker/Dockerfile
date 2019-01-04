@@ -29,5 +29,6 @@ RUN rm -rf /usr/share/nginx/html/*
 ## From ‘builder’ stage copy over the artifacts in dist folder to default nginx public folder
 COPY --from=builder /app/build /usr/share/nginx/html
 COPY --from=builder /app/favicon/* /usr/share/nginx/html/
+COPY --from=builder /app/googleec25714cc461f707.html /usr/share/nginx/html/
 
 CMD ["nginx", "-g", "daemon off;"]
