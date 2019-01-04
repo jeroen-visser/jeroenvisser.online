@@ -21,6 +21,8 @@ KUBE_DEPLOY_WAIT_RESOURCES := deploy/web
 KUBE_YAML_STAGING_ISSUER := env/prod/staging_issuer.yaml
 KUBE_YAML_PRODUCTION_ISSUER := env/prod/production_issuer.yaml
 
+APP_DEPS = docker/Dockerfile docker/nginx/default.conf img/*.jpg img/*.svg js/*.js scss/*.scss index.html
+
 include make/encrypt.mk
 include make/docker.mk
 include make/kubernetes.mk
