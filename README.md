@@ -2,7 +2,7 @@
 
 ## Preview
 
-[![Grayscale Preview](https://jeroenvisser.online/img/screenshot.png)](https://jeroenvisser.online)
+[![Website Preview](https://jeroenvisser.online/img/screenshot.png)](https://jeroenvisser.online)
 
 **[View Live Preview](https://jeroenvisser.online)**
 
