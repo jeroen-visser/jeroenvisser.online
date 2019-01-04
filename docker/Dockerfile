@@ -30,5 +30,6 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY --from=builder /app/build /usr/share/nginx/html
 COPY --from=builder /app/favicon/* /usr/share/nginx/html/
 COPY --from=builder /app/googleec25714cc461f707.html /usr/share/nginx/html/
+COPY --from=builder /app/robots.txt /usr/share/nginx/html/
 
 CMD ["nginx", "-g", "daemon off;"]
