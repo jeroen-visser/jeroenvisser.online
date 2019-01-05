@@ -6,9 +6,6 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     certmanager.k8s.io/cluster-issuer: letsencrypt-production
-data:
-  proxy-hide-headers: "Server"
-  server-tokens: "False"
 spec:
   tls:
   - hosts:
