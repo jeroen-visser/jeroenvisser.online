@@ -1,10 +1,15 @@
-.experienced-in-ddd {
-  .projects-section & h2 {
-    line-height: 1.9;
-    font-weight: bold;
+.project__img__schiphol {
+  .projects-section & {
+
+    @media (min-width: 992px) {
+      margin-top: 9rem;
+    }
+
+    @media (min-width: 1200px) {
+      margin-top: 5rem;
+    }
   }
 }
-
 
 .projects-section {
   padding: 5rem 0;

@@ -2,15 +2,17 @@
   padding: 5rem 0 5rem 0;
 }
 
-h4 {
+h3 {
   .interests-section [class*="topic-"] & {
     line-height: 51px;
-    font-weight: bold;
+    margin-bottom: 0;
   }
 }
 
 .topic {
-  .interests-section & {
-    margin-bottom: 1rem;
+  @media(min-width: 992px) {
+    .interests-section & {
+      margin-bottom: 1rem;
+    }
   }
 }
