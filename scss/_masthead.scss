@@ -1,33 +1,15 @@
 .masthead__title {
   .masthead & {
-
-    @media(min-width: 768px) {
-      margin-top: 1rem;
-    }
-
-    @media(min-width: 992px) {
-      margin-top: 8rem;
-    }
+    margin-top: 8rem;
   }
 }
 
 .masthead {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100vh;
 
-  min-height: 55rem;
-  padding: 7rem 0;
-
-  @media(min-width: 768px) {
-    min-height: 65rem;
-    padding: 10rem 0;
-  }
-
-  @media(min-width: 992px) {
-    min-height: 35rem;
-    padding: 15rem 0;
-  }
+  padding: 0;
 
   background: linear-gradient(to bottom, #{fade-out($black, .9)} 0%, #{fade-out($black, .5)} 75%, $black 100%), url('../img/bg-header.jpg');
   @media(max-width: 768px) {
@@ -65,8 +47,6 @@
     }
   }
   @media(min-width: 992px) {
-    height: 100vh;
-    padding: 0;
     h1 {
       font-size: 6.5rem;
       line-height: 6.5rem;
