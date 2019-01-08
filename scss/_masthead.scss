@@ -1,6 +1,15 @@
 .masthead__title {
   .masthead & {
-    margin-top: 8rem;
+    margin-top: 5rem;
+  }
+}
+
+.masthead__scroll {
+  margin-bottom: 6rem;
+  @media (min-width: 576px) {
+    .masthead & {
+      margin-bottom: 5rem;
+    }
   }
 }
 

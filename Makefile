@@ -38,9 +38,9 @@ ifdef RUNNING_CONTAINERS
 endif
 
 .PHONY: up
-up: DOCKER_VOLUME := $(ROOT_DIR)/index.html:/usr/share/nginx/html/index.html
+up: DOCKER_VOLUMES := -v $(ROOT_DIR)/index.html:/usr/share/nginx/html/index.html
 up: docker/.built
-	docker run -d -p $(DOCKER_EXPOSE_PORT):80 -v $(DOCKER_VOLUME) $(DOCKER_IMAGE_TAG_DIST)
+	docker run -d -p $(DOCKER_EXPOSE_PORT):80 $(DOCKER_VOLUMES) $(DOCKER_IMAGE_TAG_DIST)
 
 .PHONY: refresh-container
 refresh-container: remove-running-docker-containers up
