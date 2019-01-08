@@ -23,7 +23,7 @@
   background: linear-gradient(to bottom, #{fade-out($black, .9)} 0%, #{fade-out($black, .5)} 75%, $black 100%), url('../img/bg-header.jpg');
   @media(max-width: 768px) {
     & {
-      background: linear-gradient(to bottom, #{fade-out($black, .9)} 0%, #{fade-out($black, .5)} 75%, $black 100%), url('../img/background_mobile.jpg');
+      background: linear-gradient(to bottom, #{fade-out($black, .9)} 0%, #{fade-out($black, .5)} 75%, $black 100%), url('../img/bg-header-mobile.jpg');
       background-position: right;
       background-repeat: no-repeat;
       background-attachment: scroll;
