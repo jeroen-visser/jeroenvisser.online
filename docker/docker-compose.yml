@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  backend:
+    image: node:11.9-alpine
+    working_dir: /app/
+    user: node
+    volumes:
+      - ${ROOT_DIR}:/app/
+    command: npm run develop
+    ports:
+      - 3000:3000
+      - 3001:3001

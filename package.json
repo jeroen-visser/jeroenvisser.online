@@ -1,45 +1,39 @@
 {
-    "title": "Grayscale",
-    "name": "startbootstrap-grayscale",
-    "version": "5.0.3",
-    "description": "A grayscale one page HTML theme for Bootstrap.",
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
-    ],
-    "homepage": "https://startbootstrap.com/template-overviews/grayscale",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale/issues",
-        "email": "feedback@startbootstrap.com"
+    "title": "Personal website of Jeroen Visser",
+    "name": "jeroenvisser.online",
+    "version": "1.0.1",
+    "scripts": {
+        "develop": "node_modules/.bin/gulp watch",
+        "build": "node_modules/.bin/gulp build"
     },
+    "description": "My personal website.",
+    "homepage": "https://jeroenvisser.online",
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Jeroen Visser",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "Jeroen Visser (https://jeroenvisser.online/)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-grayscale.git"
+        "url": "https://github.com/jeroen-visser/jeroenvisser.online"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "5.8.1",
-        "bootstrap": "^4.3.1",
-        "jquery": "3.4.0",
+        "@fortawesome/fontawesome-free": "5.10.2",
+        "bootstrap": "4.3.1",
+        "jquery": "3.4.1",
         "jquery.easing": "^1.4.1"
     },
     "devDependencies": {
-        "browser-sync": "2.26.5",
-        "gulp": "4.0.1",
-        "gulp-autoprefixer": "6.1.0",
+        "browser-sync": "2.26.7",
+        "del": "5.1.0",
+        "gulp": "4.0.2",
+        "gulp-autoprefixer": "7.0.0",
         "gulp-clean-css": "4.2.0",
         "gulp-header": "2.0.9",
         "gulp-plumber": "^1.2.1",
         "gulp-rename": "1.4.0",
         "gulp-sass": "4.0.2",
-        "gulp-uglify": "3.0.2"
+        "gulp-uglify": "3.0.2",
+        "merge-stream": "2.0.0"
     }
 }

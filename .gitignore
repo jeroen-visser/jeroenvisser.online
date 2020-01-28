@@ -13,3 +13,4 @@
 .ansible-vault-password
 .kube
 /make/kubernetes.vars.mk
+/.built

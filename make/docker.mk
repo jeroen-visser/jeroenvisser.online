@@ -3,7 +3,7 @@ export HOST_GID=$(shell id -g)
 
 DOCKER_RUN = docker run --rm -u $(HOST_UID):$(HOST_GID) -e HOME=/home
 
-docker/.built: $(APP_DEPS)
+docker/.built: docker/Dockerfile $(APP_DEPS_DEVELOPMENT)
 	docker build -f $< -t $(DOCKER_IMAGE_TAG) -t $(DOCKER_IMAGE_TAG_DIST) .
 
 	touch $@
