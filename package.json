@@ -18,7 +18,7 @@
         "url": "https://github.com/jeroen-visser/jeroenvisser.online"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "5.10.2",
+        "@fortawesome/fontawesome-free": "5.13.0",
         "bootstrap": "4.3.1",
         "jquery": "3.5.0",
         "jquery.easing": "^1.4.1"
