@@ -19,7 +19,7 @@ KUBECTL = $(DOCKER_RUN) \
 	-v $(ROOT_DIR):/workspace \
 	--workdir /workspace \
 	$(KUBECTL_DOCKER_ARGS) \
-	lachlanevenson/k8s-kubectl:v1.12.2 \
+	lachlanevenson/k8s-kubectl:v1.18.3 \
 	$(KUBECTL_ARGS)
 
 # An alias to kubectl which includes the namespace
