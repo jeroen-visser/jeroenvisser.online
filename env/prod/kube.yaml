@@ -13,7 +13,7 @@ spec:
     - ${DOMAIN_NAME}
     secretName: letsencrypt-production
   rules:
-  - host: jeroenvisser.online
+  - host: ${DOMAIN_NAME}
     http:
       paths:
       - path: /

@@ -30,3 +30,10 @@ node_modules/.installed: \
 
 	$(DOCKER_COMPOSE_RUN) --no-deps backend npm install --progress false --quiet
 	touch $@
+
+.PHONY: shell
+shell: \
+	package.json \
+	package-lock.json \
+
+	$(DOCKER_COMPOSE_RUN) --no-deps backend sh
