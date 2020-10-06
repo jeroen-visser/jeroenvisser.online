@@ -7,5 +7,6 @@ static_sites:
       deploy_on_push: true
       repo: jeroen-visser/jeroenvisser.online
     name: jeroenvisser-online
+    output_dir: .
     routes:
       - path: /
