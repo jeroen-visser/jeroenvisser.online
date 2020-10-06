@@ -18,13 +18,13 @@
         "url": "https://github.com/jeroen-visser/jeroenvisser.online"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.14.0",
-        "bootstrap": "^4.5.0",
+        "@fortawesome/fontawesome-free": "^5.15.1",
+        "bootstrap": "^4.5.2",
         "jquery": "3.5.0",
         "jquery.easing": "^1.4.1"
     },
     "devDependencies": {
-        "browser-sync": "2.26.7",
+        "browser-sync": "^2.26.12",
         "del": "5.1.0",
         "gulp": "4.0.2",
         "gulp-autoprefixer": "7.0.0",
