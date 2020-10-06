@@ -1,0 +1,11 @@
+name: jeroenvisser-online
+region: ams
+static_sites:
+  - environment_slug: html
+    github:
+      branch: master
+      deploy_on_push: true
+      repo: jeroen-visser/jeroenvisser.online
+    name: jeroenvisser-online
+    routes:
+      - path: /
