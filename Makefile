@@ -17,12 +17,14 @@ MAKEFLAGS += --warn-undefined-variables
 
 include Makefile.vars
 
-include make/encrypt.mk
 include make/docker.mk
 include make/docker-compose.mk
-include make/kubernetes.mk
 
 ##### During development
+
+.PHONY: build
+build: node_modules/.installed
+	$(DOCKER_COMPOSE_RUN) --no-deps backend npm build
 
 node_modules/.installed: \
 	package.json \

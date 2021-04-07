@@ -14,3 +14,4 @@
 .kube
 /make/kubernetes.vars.mk
 /.built
+/.idea
