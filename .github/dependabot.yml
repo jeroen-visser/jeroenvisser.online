@@ -1,0 +1,34 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: gulp-autoprefixer
+    versions:
+    - 7.0.1
+  - dependency-name: jquery
+    versions:
+    - 3.5.1
+    - 3.6.0
+  - dependency-name: del
+    versions:
+    - 6.0.0
+  - dependency-name: y18n
+    versions:
+    - 3.2.2
+  - dependency-name: "@fortawesome/fontawesome-free"
+    versions:
+    - 5.15.2
+    - 5.15.3
+  - dependency-name: yargs-parser
+    versions:
+    - 5.0.1
+  - dependency-name: browser-sync
+    versions:
+    - 2.26.14
+  - dependency-name: bootstrap
+    versions:
+    - 4.6.0
